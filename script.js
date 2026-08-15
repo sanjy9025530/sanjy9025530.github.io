@@ -1,54 +1,26 @@
-/* =====================================================
+/* =========================================================
    MOBILE NAVIGATION
-====================================================== */
+========================================================= */
 
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const navMenu = document.getElementById("navMenu");
 
-if (menuToggle && navLinks) {
+if (menuToggle && navMenu) {
 
     menuToggle.addEventListener("click", function () {
 
-        const isOpen =
-            navLinks.classList.toggle("open");
-
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
-
-        document.body.classList.toggle(
-            "menu-open",
-            isOpen
-        );
-
-        menuToggle.textContent =
-            isOpen ? "✕" : "☰";
+        navMenu.classList.toggle("active");
 
     });
 
 
-    /* Close menu after clicking a navigation link */
+    const navLinks = navMenu.querySelectorAll("a");
 
-    const navigationLinks =
-        document.querySelectorAll(".nav-link");
-
-    navigationLinks.forEach(function (link) {
+    navLinks.forEach(function (link) {
 
         link.addEventListener("click", function () {
 
-            navLinks.classList.remove("open");
-
-            document.body.classList.remove(
-                "menu-open"
-            );
-
-            menuToggle.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-            menuToggle.textContent = "☰";
+            navMenu.classList.remove("active");
 
         });
 
@@ -57,56 +29,54 @@ if (menuToggle && navLinks) {
 }
 
 
+/* =========================================================
+   CURRENT YEAR
+========================================================= */
 
-/* =====================================================
-   ACTIVE NAVIGATION LINK
-====================================================== */
+const currentYear = document.getElementById("currentYear");
 
-const sections =
-    document.querySelectorAll("section[id]");
+if (currentYear) {
 
-const navItems =
-    document.querySelectorAll(".nav-link");
+    currentYear.textContent = new Date().getFullYear();
 
+}
+
+
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
+
+const sections = document.querySelectorAll("section[id]");
+const navigationLinks = document.querySelectorAll("nav a");
 
 function updateActiveNavigation() {
 
     let currentSection = "";
 
-    const scrollPosition =
-        window.scrollY + 150;
-
-
     sections.forEach(function (section) {
 
-        const sectionTop =
-            section.offsetTop;
-
-        const sectionHeight =
-            section.offsetHeight;
+        const sectionTop = section.offsetTop - 180;
+        const sectionHeight = section.offsetHeight;
 
         if (
-            scrollPosition >= sectionTop &&
-            scrollPosition <
-            sectionTop + sectionHeight
+            window.scrollY >= sectionTop &&
+            window.scrollY < sectionTop + sectionHeight
         ) {
 
-            currentSection =
-                section.getAttribute("id");
+            currentSection = section.getAttribute("id");
 
         }
 
     });
 
 
-    navItems.forEach(function (link) {
+    navigationLinks.forEach(function (link) {
 
         link.classList.remove("active");
 
-        const target =
-            link.getAttribute("href");
+        const href = link.getAttribute("href");
 
-        if (target === "#" + currentSection) {
+        if (href === "#" + currentSection) {
 
             link.classList.add("active");
 
@@ -116,254 +86,45 @@ function updateActiveNavigation() {
 
 }
 
-
-window.addEventListener(
-    "scroll",
-    updateActiveNavigation
-);
-
+window.addEventListener("scroll", updateActiveNavigation);
 
 updateActiveNavigation();
 
 
-
-/* =====================================================
+/* =========================================================
    SCROLL REVEAL
-====================================================== */
+========================================================= */
 
-const revealElements =
-    document.querySelectorAll(".reveal");
+const revealElements = document.querySelectorAll(
+    ".skill-card, .project-card, .education-card, .contact-card"
+);
 
+const revealObserver = new IntersectionObserver(
+    function (entries, observer) {
 
-if ("IntersectionObserver" in window) {
+        entries.forEach(function (entry) {
 
-    const revealObserver =
-        new IntersectionObserver(
-            function (entries, observer) {
+            if (entry.isIntersecting) {
 
-                entries.forEach(function (entry) {
+                entry.target.classList.add("show");
 
-                    if (entry.isIntersecting) {
+                observer.unobserve(entry.target);
 
-                        entry.target.classList.add(
-                            "visible"
-                        );
-
-                        observer.unobserve(
-                            entry.target
-                        );
-
-                    }
-
-                });
-
-            },
-            {
-                threshold: 0.12
             }
-        );
 
+        });
 
-    revealElements.forEach(function (element) {
-
-        revealObserver.observe(element);
-
-    });
-
-} else {
-
-    revealElements.forEach(function (element) {
-
-        element.classList.add("visible");
-
-    });
-
-}
-
-
-
-/* =====================================================
-   BACK TO TOP
-====================================================== */
-
-const backToTop =
-    document.getElementById("backToTop");
-
-
-function updateBackToTop() {
-
-    if (!backToTop) {
-        return;
+    },
+    {
+        threshold: 0.12
     }
-
-
-    if (window.scrollY > 500) {
-
-        backToTop.classList.add("show");
-
-    } else {
-
-        backToTop.classList.remove("show");
-
-    }
-
-}
-
-
-window.addEventListener(
-    "scroll",
-    updateBackToTop
 );
 
 
-if (backToTop) {
+revealElements.forEach(function (element) {
 
-    backToTop.addEventListener(
-        "click",
-        function () {
+    element.classList.add("reveal");
 
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-
-        }
-    );
-
-}
-
-
-
-/* =====================================================
-   CURRENT YEAR
-====================================================== */
-
-const currentYear =
-    document.getElementById("currentYear");
-
-
-if (currentYear) {
-
-    currentYear.textContent =
-        new Date().getFullYear();
-
-}
-
-
-
-/* =====================================================
-   SMOOTH INTERNAL LINKS
-====================================================== */
-
-const internalLinks =
-    document.querySelectorAll(
-        'a[href^="#"]'
-    );
-
-
-internalLinks.forEach(function (link) {
-
-    link.addEventListener(
-        "click",
-        function (event) {
-
-            const targetId =
-                link.getAttribute("href");
-
-
-            if (
-                !targetId ||
-                targetId === "#"
-            ) {
-
-                return;
-
-            }
-
-
-            const target =
-                document.querySelector(targetId);
-
-
-            if (!target) {
-
-                return;
-
-            }
-
-
-            event.preventDefault();
-
-
-            const header =
-                document.querySelector(
-                    ".site-header"
-                );
-
-
-            const headerHeight =
-                header
-                    ? header.offsetHeight
-                    : 0;
-
-
-            const targetPosition =
-                target.getBoundingClientRect().top +
-                window.scrollY -
-                headerHeight;
-
-
-            window.scrollTo({
-
-                top: targetPosition,
-
-                behavior: "smooth"
-
-            });
-
-        }
-    );
+    revealObserver.observe(element);
 
 });
-
-
-
-/* =====================================================
-   EXTERNAL LINKS
-====================================================== */
-
-const externalLinks =
-    document.querySelectorAll(
-        'a[target="_blank"]'
-    );
-
-
-externalLinks.forEach(function (link) {
-
-    link.setAttribute(
-        "rel",
-        "noopener noreferrer"
-    );
-
-});
-
-
-
-/* =====================================================
-   PAGE LOAD
-====================================================== */
-
-window.addEventListener(
-    "load",
-    function () {
-
-        document.body.classList.add(
-            "page-loaded"
-        );
-
-        updateActiveNavigation();
-
-        updateBackToTop();
-
-    }
-);
