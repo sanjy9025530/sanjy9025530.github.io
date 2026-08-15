@@ -1,647 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Sanjay Manigandan | Data Analyst & Data Science</title>
+    <title>Sanjay M | Data Analyst | Data Scientist | AI & Machine Learning</title>
 
     <meta name="description"
-          content="Sanjay Manigandan - Data Analyst, Data Science, Machine Learning, Deep Learning and Power BI portfolio.">
+        content="Sanjay M - B.Tech Artificial Intelligence and Data Science student specializing in Data Analytics, Machine Learning, Deep Learning, NLP, Generative AI, LLMs, Power BI and Data Science.">
 
     <meta name="keywords"
-          content="Sanjay Manigandan, Data Analyst, Data Science, Machine Learning, Deep Learning, Power BI, Python, SQL">
+        content="Sanjay M, Data Analyst, Data Scientist, Artificial Intelligence, Machine Learning, Deep Learning, NLP, Generative AI, Hugging Face, Transformers, LLM, RAG, Python, SQL, Power BI, TensorFlow, PyTorch">
 
-    <meta name="author" content="Sanjay Manigandan">
+    <meta name="author" content="Sanjay M">
 
-    <style>
-
-        /* ==============================
-           GLOBAL
-        ============================== */
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #0b1328;
-            color: #f5f7fb;
-            line-height: 1.7;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-        }
-
-
-        /* ==============================
-           NAVIGATION
-        ============================== */
-
-        nav {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(11, 19, 40, 0.96);
-            backdrop-filter: blur(10px);
-
-            border-bottom: 1px solid #263451;
-        }
-
-        .nav-container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-
-            min-height: 75px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .logo {
-            font-size: 25px;
-            font-weight: 700;
-            color: #ffffff;
-        }
-
-        .logo span {
-            color: #29b6f6;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 38px;
-        }
-
-        .nav-links a {
-            color: #f5f7fb;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: #29b6f6;
-        }
-
-
-        /* ==============================
-           HERO
-        ============================== */
-
-        #home {
-            min-height: calc(100vh - 75px);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 80px 20px;
-        }
-
-        .hero-content {
-            max-width: 1000px;
-        }
-
-        .hero-small {
-            color: #9fc4df;
-            font-size: 18px;
-            letter-spacing: 1px;
-            margin-bottom: 25px;
-        }
-
-        .hero-title {
-            font-size: clamp(42px, 7vw, 76px);
-            line-height: 1.1;
-            margin-bottom: 25px;
-            font-weight: 800;
-        }
-
-        .hero-title span {
-            color: #29b6f6;
-        }
-
-        .hero-role {
-            font-size: clamp(21px, 3vw, 32px);
-            font-weight: 700;
-            margin-bottom: 25px;
-            color: #e8edf7;
-        }
-
-        .hero-description {
-            max-width: 850px;
-            margin: auto;
-
-            color: #aebbd0;
-            font-size: 18px;
-        }
-
-        .hero-buttons {
-            margin-top: 35px;
-
-            display: flex;
-            justify-content: center;
-            gap: 18px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 13px 27px;
-            border-radius: 7px;
-
-            font-size: 16px;
-            font-weight: 700;
-
-            transition: 0.3s;
-            border: 1px solid #29b6f6;
-        }
-
-        .btn-primary {
-            background: #29b6f6;
-            color: #07101f;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            background: #4dc4fa;
-        }
-
-        .btn-outline {
-            color: #29b6f6;
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: #29b6f6;
-            color: #07101f;
-        }
-
-
-        /* ==============================
-           SECTIONS
-        ============================== */
-
-        section {
-            padding: 110px 0;
-        }
-
-        .section-label {
-            color: #29b6f6;
-            font-size: 16px;
-            font-weight: 700;
-            letter-spacing: 1.5px;
-            margin-bottom: 12px;
-        }
-
-        .section-title {
-            font-size: clamp(34px, 5vw, 52px);
-            margin-bottom: 35px;
-        }
-
-        .section-title span {
-            color: #29b6f6;
-        }
-
-
-        /* ==============================
-           ABOUT
-        ============================== */
-
-        .about-content {
-            max-width: 1000px;
-        }
-
-        .about-content p {
-            color: #c1cada;
-            font-size: 18px;
-            margin-bottom: 18px;
-        }
-
-        .about-highlight {
-            margin-top: 35px;
-
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .highlight-box {
-            background: #16223a;
-            border: 1px solid #293b59;
-            border-radius: 12px;
-
-            padding: 28px;
-
-            transition: 0.3s;
-        }
-
-        .highlight-box:hover {
-            transform: translateY(-5px);
-            border-color: #29b6f6;
-        }
-
-        .highlight-box h3 {
-            color: #29b6f6;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
-
-        .highlight-box p {
-            font-size: 15px;
-            margin: 0;
-        }
-
-
-        /* ==============================
-           SKILLS
-        ============================== */
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 22px;
-        }
-
-        .skill-card {
-            background: #16223a;
-            border: 1px solid #293b59;
-            border-radius: 12px;
-
-            padding: 28px;
-
-            transition: 0.3s;
-        }
-
-        .skill-card:hover {
-            transform: translateY(-5px);
-            border-color: #29b6f6;
-        }
-
-        .skill-card h3 {
-            color: #29b6f6;
-            margin-bottom: 18px;
-            font-size: 22px;
-        }
-
-        .skill-list {
-            list-style: none;
-        }
-
-        .skill-list li {
-            padding: 7px 0;
-            color: #c5cfdf;
-            border-bottom: 1px solid #263650;
-        }
-
-        .skill-list li:last-child {
-            border-bottom: none;
-        }
-
-
-        /* ==============================
-           PROJECTS
-        ============================== */
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .project-card {
-            background: #16223a;
-
-            border: 1px solid #293b59;
-            border-radius: 14px;
-
-            padding: 32px;
-
-            transition: 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-6px);
-            border-color: #29b6f6;
-        }
-
-        .project-number {
-            color: #29b6f6;
-            font-size: 15px;
-            font-weight: 700;
-            letter-spacing: 1px;
-        }
-
-        .project-category {
-            color: #9db3ce;
-            font-size: 14px;
-            margin-top: 10px;
-            margin-bottom: 8px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .project-card h3 {
-            color: #29b6f6;
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-
-        .project-card p {
-            color: #c0cada;
-            margin-bottom: 18px;
-        }
-
-        .project-tech {
-            color: #ffffff;
-            font-size: 15px;
-            margin-bottom: 20px;
-        }
-
-        .project-link {
-            display: inline-block;
-
-            color: #29b6f6;
-            font-weight: 700;
-
-            border-bottom: 1px solid #29b6f6;
-
-            transition: 0.3s;
-        }
-
-        .project-link:hover {
-            color: #ffffff;
-        }
-
-
-        /* ==============================
-           EDUCATION
-        ============================== */
-
-        .education-card {
-            background: #16223a;
-            border: 1px solid #293b59;
-            border-radius: 14px;
-
-            padding: 35px;
-
-            max-width: 900px;
-        }
-
-        .education-card h3 {
-            font-size: 26px;
-            color: #29b6f6;
-            margin-bottom: 10px;
-        }
-
-        .education-card h4 {
-            font-size: 19px;
-            margin-bottom: 12px;
-            color: #ffffff;
-        }
-
-        .education-card p {
-            color: #bdc9db;
-        }
-
-        .education-year {
-            display: inline-block;
-
-            margin-top: 18px;
-
-            padding: 6px 14px;
-
-            border: 1px solid #29b6f6;
-            border-radius: 20px;
-
-            color: #29b6f6;
-            font-size: 14px;
-        }
-
-
-        /* ==============================
-           CONTACT
-        ============================== */
-
-        .contact-box {
-            background: #16223a;
-
-            border: 1px solid #293b59;
-            border-radius: 14px;
-
-            padding: 45px;
-
-            text-align: center;
-
-            max-width: 850px;
-            margin: auto;
-        }
-
-        .contact-box h3 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-
-        .contact-box p {
-            color: #bdc9db;
-            margin-bottom: 30px;
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
-
-
-        /* ==============================
-           FOOTER
-        ============================== */
-
-        footer {
-            border-top: 1px solid #263451;
-
-            padding: 30px 20px;
-
-            text-align: center;
-
-            color: #8e9db3;
-            font-size: 14px;
-        }
-
-        footer span {
-            color: #29b6f6;
-        }
-
-
-        /* ==============================
-           RESPONSIVE
-        ============================== */
-
-        @media (max-width: 900px) {
-
-            .nav-links {
-                gap: 18px;
-            }
-
-            .skills-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .about-highlight {
-                grid-template-columns: 1fr;
-            }
-        }
-
-
-        @media (max-width: 650px) {
-
-            .nav-container {
-                flex-direction: column;
-                padding: 18px 0;
-                gap: 12px;
-            }
-
-            .nav-links {
-                gap: 14px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-
-            .nav-links a {
-                font-size: 14px;
-            }
-
-            #home {
-                min-height: auto;
-                padding: 100px 15px;
-            }
-
-            section {
-                padding: 80px 0;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                padding: 25px;
-            }
-
-            .contact-box {
-                padding: 30px 20px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 
 <body>
 
+    <!-- ================= NAVIGATION ================= -->
 
-    <!-- ==============================
-         NAVIGATION
-    ============================== -->
+    <header>
+        <nav class="navbar">
 
-    <nav>
-
-        <div class="nav-container">
-
-            <a href="#home" class="logo">
-                Sanjay<span>.</span>
-            </a>
+            <div class="logo">
+                SANJAY M
+            </div>
 
             <ul class="nav-links">
-
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-
-                <li>
-                    <a href="#about">About</a>
-                </li>
-
-                <li>
-                    <a href="#skills">Skills</a>
-                </li>
-
-                <li>
-                    <a href="#projects">Projects</a>
-                </li>
-
-                <li>
-                    <a href="#education">Education</a>
-                </li>
-
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
 
-        </div>
+        </nav>
+    </header>
 
-    </nav>
 
+    <!-- ================= HERO SECTION ================= -->
 
-    <!-- ==============================
-         HOME
-    ============================== -->
-
-    <section id="home">
+    <section id="home" class="hero">
 
         <div class="hero-content">
 
-            <div class="hero-small">
-                DATA ANALYST • DATA SCIENCE • AI
-            </div>
+            <p class="eyebrow">
+                DATA ANALYST • DATA SCIENCE • ARTIFICIAL INTELLIGENCE
+            </p>
 
-            <h1 class="hero-title">
-                Hi, I'm <span>Sanjay Manigandan</span>
+            <h1>
+                Hi, I'm <span>Sanjay M</span>
             </h1>
 
-            <h2 class="hero-role">
-                Data Analyst | Data Science | Machine Learning | Power BI
+            <h2>
+                Data Analyst | Data Scientist | Machine Learning | AI
             </h2>
 
             <p class="hero-description">
-                I work with data to discover meaningful insights,
-                build analytical solutions, develop machine learning
-                models, and create interactive Power BI dashboards.
+                I transform data into meaningful insights, build machine learning
+                solutions, develop AI systems, create interactive dashboards,
+                and explore modern Generative AI and Large Language Model technologies.
             </p>
 
             <div class="hero-buttons">
 
-                <a href="#projects" class="btn btn-primary">
+                <a href="#projects" class="btn primary-btn">
                     View Projects
                 </a>
 
                 <a href="https://github.com/sanjy9025530"
                    target="_blank"
-                   class="btn btn-outline">
+                   class="btn secondary-btn">
                     GitHub
                 </a>
 
@@ -652,499 +85,254 @@
     </section>
 
 
-    <!-- ==============================
-         ABOUT
-    ============================== -->
+    <!-- ================= ABOUT ================= -->
 
-    <section id="about">
+    <section id="about" class="section">
 
-        <div class="container">
+        <div class="section-label">
+            ABOUT ME
+        </div>
 
-            <div class="section-label">
-                ABOUT ME
-            </div>
+        <h2 class="section-title">
+            Turning Data Into Meaningful Insights
+        </h2>
 
-            <h2 class="section-title">
-                Turning Data Into <span>Meaningful Insights</span>
-            </h2>
+        <div class="about-content">
 
-            <div class="about-content">
+            <p>
+                I am a B.Tech student specializing in
+                <strong>Artificial Intelligence and Data Science</strong>
+                with a strong interest in Data Analytics, Machine Learning,
+                Deep Learning, Generative AI, and Business Intelligence.
+            </p>
 
-                <p>
-                    I am a B.Tech graduate in Artificial Intelligence
-                    and Data Science with a strong interest in Data
-                    Analytics, Data Science, Machine Learning, and
-                    Artificial Intelligence.
-                </p>
+            <p>
+                My technical interests include
+                <strong>Python, SQL, Statistics, Exploratory Data Analysis,
+                Data Visualization, Feature Engineering, Machine Learning,
+                Deep Learning, Natural Language Processing, Computer Vision,
+                and Generative AI.</strong>
+            </p>
 
-                <p>
-                    I am developing practical skills in Python, SQL,
-                    Excel, Power BI, Statistics, Machine Learning,
-                    Deep Learning, and Generative AI through
-                    hands-on learning and projects.
-                </p>
+            <p>
+                I work with modern AI technologies including
+                <strong>Hugging Face, Transformers, Large Language Models,
+                embeddings, prompt engineering, Retrieval-Augmented Generation
+                (RAG), and AI application development.</strong>
+            </p>
 
-                <p>
-                    My projects focus on data analysis, visualization,
-                    machine learning, deep learning, and interactive
-                    business intelligence dashboards.
-                </p>
-
-            </div>
-
-
-            <div class="about-highlight">
-
-                <div class="highlight-box">
-
-                    <h3>Data</h3>
-
-                    <p>
-                        Data Analysis, Statistics,
-                        Data Visualization and Business Intelligence
-                    </p>
-
-                </div>
-
-
-                <div class="highlight-box">
-
-                    <h3>AI</h3>
-
-                    <p>
-                        Machine Learning, Deep Learning
-                        and Generative AI
-                    </p>
-
-                </div>
-
-
-                <div class="highlight-box">
-
-                    <h3>BI</h3>
-
-                    <p>
-                        Power BI, DAX, Power Query
-                        and Interactive Dashboards
-                    </p>
-
-                </div>
-
-            </div>
+            <p>
+                I also develop analytical dashboards using
+                <strong>Power BI, DAX, Power Query, Excel</strong>
+                and apply data-driven techniques to extract actionable insights
+                from structured and unstructured datasets.
+            </p>
 
         </div>
 
     </section>
 
 
-    <!-- ==============================
-         SKILLS
-    ============================== -->
+    <!-- ================= SKILLS ================= -->
 
-    <section id="skills">
+    <section id="skills" class="section skills-section">
 
-        <div class="container">
-
-            <div class="section-label">
-                TECHNICAL SKILLS
-            </div>
-
-            <h2 class="section-title">
-                Tools & <span>Technologies</span>
-            </h2>
-
-
-            <div class="skills-grid">
-
-
-                <!-- Programming -->
-
-                <div class="skill-card">
-
-                    <h3>Programming</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Python</li>
-                        <li>SQL</li>
-                        <li>NumPy</li>
-                        <li>Pandas</li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- Data Analytics -->
-
-                <div class="skill-card">
-
-                    <h3>Data Analytics</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Excel</li>
-                        <li>Statistics</li>
-                        <li>Data Cleaning</li>
-                        <li>Data Visualization</li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- Power BI -->
-
-                <div class="skill-card">
-
-                    <h3>Power BI</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Power BI</li>
-                        <li>DAX</li>
-                        <li>Power Query</li>
-                        <li>Dashboard Development</li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- Machine Learning -->
-
-                <div class="skill-card">
-
-                    <h3>Machine Learning</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Machine Learning</li>
-                        <li>Scikit-learn</li>
-                        <li>Classification</li>
-                        <li>Regression</li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- Deep Learning -->
-
-                <div class="skill-card">
-
-                    <h3>Deep Learning</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Deep Learning</li>
-                        <li>TensorFlow</li>
-                        <li>Keras</li>
-                        <li>Neural Networks</li>
-
-                    </ul>
-
-                </div>
-
-
-                <!-- AI -->
-
-                <div class="skill-card">
-
-                    <h3>Artificial Intelligence</h3>
-
-                    <ul class="skill-list">
-
-                        <li>Generative AI</li>
-                        <li>Natural Language Processing</li>
-                        <li>AI Applications</li>
-                        <li>Model Development</li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-
+        <div class="section-label">
+            TECHNICAL SKILLS
         </div>
 
-    </section>
+        <h2 class="section-title">
+            Tools & Technologies
+        </h2>
 
 
-    <!-- ==============================
-         PROJECTS
-    ============================== -->
+        <div class="skills-grid">
 
-    <section id="projects">
 
-        <div class="container">
+            <!-- DATA ANALYTICS -->
 
-            <div class="section-label">
-                PORTFOLIO
-            </div>
-
-            <h2 class="section-title">
-                Featured <span>Projects</span>
-            </h2>
-
-
-            <div class="projects-grid">
-
-
-                <!-- PROJECT 01 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        01
-                    </div>
-
-                    <div class="project-category">
-                        Power BI • Data Analysis
-                    </div>
-
-                    <h3>
-                        Cancer Diagnosis Analytics
-                    </h3>
-
-                    <p>
-                        Interactive Power BI dashboard for analyzing
-                        breast cancer diagnosis data, including
-                        diagnosis distribution, tumor characteristics,
-                        KPIs, and interactive visual analysis.
-                    </p>
-
-                    <div class="project-tech">
-                        Power BI • DAX • Data Analysis
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 02 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        02
-                    </div>
-
-                    <div class="project-category">
-                        Power BI • Data Visualization
-                    </div>
-
-                    <h3>
-                        Crime Analysis Dashboard
-                    </h3>
-
-                    <p>
-                        Interactive dashboard for analyzing crime trends,
-                        crime categories, solved and unsolved cases,
-                        and monthly crime patterns.
-                    </p>
-
-                    <div class="project-tech">
-                        Power BI • Data Visualization • DAX
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 03 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        03
-                    </div>
-
-                    <div class="project-category">
-                        Power BI • Business Intelligence
-                    </div>
-
-                    <h3>
-                        EV Sales Analytics
-                    </h3>
-
-                    <p>
-                        Global electric vehicle analytics dashboard
-                        covering EV sales trends, market share,
-                        leading countries, vehicle types, and
-                        charging infrastructure.
-                    </p>
-
-                    <div class="project-tech">
-                        Power BI • DAX • Business Intelligence
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 04 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        04
-                    </div>
-
-                    <div class="project-category">
-                        Machine Learning • Deep Learning
-                    </div>
-
-                    <h3>
-                        Machine Learning & Deep Learning Portfolio
-                    </h3>
-
-                    <p>
-                        Collection of machine learning and deep learning
-                        projects covering algorithms, neural network
-                        models, data processing, and model development.
-                    </p>
-
-                    <div class="project-tech">
-                        Python • Machine Learning • Deep Learning
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 05 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        05
-                    </div>
-
-                    <div class="project-category">
-                        Python • Data Analytics
-                    </div>
-
-                    <h3>
-                        Exploratory Data Analysis
-                    </h3>
-
-                    <p>
-                        Data analysis projects focused on data cleaning,
-                        exploratory analysis, statistical analysis,
-                        visualization, and extracting useful insights
-                        from datasets.
-                    </p>
-
-                    <div class="project-tech">
-                        Python • Pandas • NumPy • Matplotlib
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-
-                <!-- PROJECT 06 -->
-
-                <div class="project-card">
-
-                    <div class="project-number">
-                        06
-                    </div>
-
-                    <div class="project-category">
-                        SQL • Data Analysis
-                    </div>
-
-                    <h3>
-                        SQL Data Analytics
-                    </h3>
-
-                    <p>
-                        SQL-based analytical projects involving data
-                        extraction, filtering, aggregation, joins,
-                        business analysis, and insight generation.
-                    </p>
-
-                    <div class="project-tech">
-                        SQL • Data Analysis • Business Analytics
-                    </div>
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="project-link">
-                        View on GitHub →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ==============================
-         EDUCATION
-    ============================== -->
-
-    <section id="education">
-
-        <div class="container">
-
-            <div class="section-label">
-                EDUCATION
-            </div>
-
-            <h2 class="section-title">
-                Academic <span>Background</span>
-            </h2>
-
-
-            <div class="education-card">
+            <div class="skill-card">
 
                 <h3>
-                    B.Tech – Artificial Intelligence and Data Science
+                    Data Analytics
                 </h3>
 
-                <h4>
-                    Bachelor of Technology
-                </h4>
+                <div class="skill-tags">
 
-                <p>
-                    Academic background focused on Artificial Intelligence,
-                    Data Science, Machine Learning, Data Analytics,
-                    Statistics, Programming, and related technologies.
-                </p>
+                    <span>Python</span>
+                    <span>SQL</span>
+                    <span>Excel</span>
+                    <span>Statistics</span>
+                    <span>EDA</span>
+                    <span>Data Cleaning</span>
+                    <span>Data Wrangling</span>
+                    <span>Feature Engineering</span>
+                    <span>Data Visualization</span>
 
-                <div class="education-year">
-                    B.Tech Graduate
+                </div>
+
+            </div>
+
+
+            <!-- PYTHON ECOSYSTEM -->
+
+            <div class="skill-card">
+
+                <h3>
+                    Python & Data Science
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>Pandas</span>
+                    <span>NumPy</span>
+                    <span>Matplotlib</span>
+                    <span>Seaborn</span>
+                    <span>Scikit-learn</span>
+                    <span>Jupyter Notebook</span>
+                    <span>Google Colab</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- MACHINE LEARNING -->
+
+            <div class="skill-card">
+
+                <h3>
+                    Machine Learning
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>Supervised Learning</span>
+                    <span>Unsupervised Learning</span>
+                    <span>Classification</span>
+                    <span>Regression</span>
+                    <span>Clustering</span>
+                    <span>Feature Selection</span>
+                    <span>Model Evaluation</span>
+                    <span>Hyperparameter Optimization</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DEEP LEARNING -->
+
+            <div class="skill-card">
+
+                <h3>
+                    Deep Learning
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>TensorFlow</span>
+                    <span>Keras</span>
+                    <span>PyTorch</span>
+                    <span>Neural Networks</span>
+                    <span>CNN</span>
+                    <span>RNN</span>
+                    <span>LSTM</span>
+                    <span>Transfer Learning</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- GENERATIVE AI -->
+
+            <div class="skill-card featured-skill">
+
+                <h3>
+                    Generative AI & LLM
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>Generative AI</span>
+                    <span>Large Language Models</span>
+                    <span>Hugging Face</span>
+                    <span>Transformers</span>
+                    <span>NLP</span>
+                    <span>Prompt Engineering</span>
+                    <span>Text Embeddings</span>
+                    <span>RAG</span>
+                    <span>LLM Applications</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- AI FRAMEWORKS -->
+
+            <div class="skill-card">
+
+                <h3>
+                    AI Frameworks & Tools
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>Hugging Face Transformers</span>
+                    <span>PyTorch</span>
+                    <span>TensorFlow</span>
+                    <span>Keras</span>
+                    <span>Scikit-learn</span>
+                    <span>LangChain</span>
+                    <span>Streamlit</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- POWER BI -->
+
+            <div class="skill-card">
+
+                <h3>
+                    Business Intelligence
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>Power BI</span>
+                    <span>DAX</span>
+                    <span>Power Query</span>
+                    <span>Data Modeling</span>
+                    <span>Dashboard Design</span>
+                    <span>KPI Analysis</span>
+                    <span>Business Analytics</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- DATABASE -->
+
+            <div class="skill-card">
+
+                <h3>
+                    Databases & Development
+                </h3>
+
+                <div class="skill-tags">
+
+                    <span>SQL</span>
+                    <span>MySQL</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>REST APIs</span>
+                    <span>Streamlit</span>
+
                 </div>
 
             </div>
@@ -1154,57 +342,267 @@
     </section>
 
 
-    <!-- ==============================
-         CONTACT
-    ============================== -->
+    <!-- ================= PROJECTS ================= -->
 
-    <section id="contact">
+    <section id="projects" class="section">
 
-        <div class="container">
+        <div class="section-label">
+            PORTFOLIO
+        </div>
 
-            <div class="section-label">
-                CONTACT
-            </div>
-
-            <h2 class="section-title">
-                Let's <span>Connect</span>
-            </h2>
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
 
 
-            <div class="contact-box">
+        <div class="projects-container">
+
+
+            <!-- PROJECT 01 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    01
+                </div>
+
+                <p class="project-category">
+                    POWER BI • DATA ANALYTICS
+                </p>
 
                 <h3>
-                    Interested in Data & AI?
+                    Cancer Diagnosis Analytics
                 </h3>
 
                 <p>
-                    Feel free to connect with me for opportunities,
-                    projects, collaborations, and discussions related
-                    to Data Analytics, Data Science, Machine Learning,
-                    Artificial Intelligence, and Power BI.
+                    Interactive Power BI dashboard for analyzing breast cancer
+                    diagnosis data, tumor characteristics, diagnosis distribution,
+                    KPIs, and analytical patterns.
                 </p>
 
-
-                <div class="contact-links">
-
-                    <a href="https://github.com/sanjy9025530"
-                       target="_blank"
-                       class="btn btn-outline">
-                        GitHub
-                    </a>
-
-                    <a href="https://www.linkedin.com/"
-                       target="_blank"
-                       class="btn btn-outline">
-                        LinkedIn
-                    </a>
-
-                    <a href="mailto:your-email@example.com"
-                       class="btn btn-primary">
-                        Email Me
-                    </a>
-
+                <div class="project-tech">
+                    Power BI • DAX • Power Query • Data Visualization
                 </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 02 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    02
+                </div>
+
+                <p class="project-category">
+                    POWER BI • DATA VISUALIZATION
+                </p>
+
+                <h3>
+                    Crime Analysis Dashboard
+                </h3>
+
+                <p>
+                    Interactive analytical dashboard for studying crime categories,
+                    solved and unsolved cases, monthly trends, geographical
+                    patterns, and key performance indicators.
+                </p>
+
+                <div class="project-tech">
+                    Power BI • DAX • Power Query • Data Modeling
+                </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 03 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    03
+                </div>
+
+                <p class="project-category">
+                    BUSINESS INTELLIGENCE • POWER BI
+                </p>
+
+                <h3>
+                    EV Sales Analytics
+                </h3>
+
+                <p>
+                    Global electric vehicle analytics dashboard covering
+                    sales trends, market distribution, leading countries,
+                    vehicle categories, and charging infrastructure.
+                </p>
+
+                <div class="project-tech">
+                    Power BI • DAX • Power Query • Business Intelligence
+                </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 04 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    04
+                </div>
+
+                <p class="project-category">
+                    MACHINE LEARNING • DEEP LEARNING
+                </p>
+
+                <h3>
+                    Machine Learning & Deep Learning Portfolio
+                </h3>
+
+                <p>
+                    Collection of machine learning and deep learning projects
+                    involving data preprocessing, feature engineering, model
+                    development, neural networks, evaluation, and prediction.
+                </p>
+
+                <div class="project-tech">
+                    Python • Scikit-learn • TensorFlow • Keras • PyTorch
+                </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 05 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    05
+                </div>
+
+                <p class="project-category">
+                    NLP • GENERATIVE AI • HUGGING FACE
+                </p>
+
+                <h3>
+                    Natural Language Processing & LLM Applications
+                </h3>
+
+                <p>
+                    NLP-focused projects involving text preprocessing,
+                    semantic representation, transformer architectures,
+                    text classification, embeddings, and Large Language
+                    Model experimentation.
+                </p>
+
+                <div class="project-tech">
+                    Python • NLP • Hugging Face • Transformers • LLM
+                </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+            <!-- PROJECT 06 -->
+
+            <article class="project-card">
+
+                <div class="project-number">
+                    06
+                </div>
+
+                <p class="project-category">
+                    GENERATIVE AI • RAG • LLM
+                </p>
+
+                <h3>
+                    Generative AI & Retrieval-Augmented Generation
+                </h3>
+
+                <p>
+                    Exploration of modern Generative AI workflows using
+                    Large Language Models, prompt engineering, embeddings,
+                    retrieval pipelines, and Retrieval-Augmented Generation.
+                </p>
+
+                <div class="project-tech">
+                    Hugging Face • Transformers • LLM • RAG • LangChain
+                </div>
+
+                <a href="https://github.com/sanjy9025530"
+                   target="_blank">
+                    View on GitHub →
+                </a>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= EDUCATION ================= -->
+
+    <section id="education" class="section education-section">
+
+        <div class="section-label">
+            EDUCATION
+        </div>
+
+        <h2 class="section-title">
+            Academic Background
+        </h2>
+
+
+        <div class="education-card">
+
+            <div class="education-year">
+                2022 — 2026
+            </div>
+
+            <div>
+
+                <h3>
+                    B.Tech - Artificial Intelligence and Data Science
+                </h3>
+
+                <p class="institution">
+                    Karpagam Institute of Technology, Coimbatore
+                </p>
+
+                <p>
+                    Academic focus includes Artificial Intelligence,
+                    Data Science, Machine Learning, Deep Learning,
+                    Statistics, Data Analytics, Natural Language Processing,
+                    and Generative AI.
+                </p>
 
             </div>
 
@@ -1213,19 +611,113 @@
     </section>
 
 
-    <!-- ==============================
-         FOOTER
-    ============================== -->
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+        <div class="section-label">
+            CONTACT
+        </div>
+
+        <h2 class="section-title">
+            Let's Connect
+        </h2>
+
+        <p class="contact-description">
+            Interested in Data Science, Artificial Intelligence,
+            Machine Learning, analytics, or collaborative projects?
+            Feel free to connect with me.
+        </p>
+
+
+        <div class="contact-grid">
+
+
+            <!-- EMAIL -->
+
+            <a href="mailto:sanjayishu2004@gmail.com"
+               class="contact-card">
+
+                <span class="contact-label">
+                    EMAIL
+                </span>
+
+                <strong>
+                    sanjayishu2004@gmail.com
+                </strong>
+
+            </a>
+
+
+            <!-- PHONE -->
+
+            <a href="tel:+919025530720"
+               class="contact-card">
+
+                <span class="contact-label">
+                    PHONE
+                </span>
+
+                <strong>
+                    +91 9025530720
+                </strong>
+
+            </a>
+
+
+            <!-- GITHUB -->
+
+            <a href="https://github.com/sanjy9025530"
+               target="_blank"
+               class="contact-card">
+
+                <span class="contact-label">
+                    GITHUB
+                </span>
+
+                <strong>
+                    github.com/sanjy9025530
+                </strong>
+
+            </a>
+
+
+            <!-- LINKEDIN -->
+
+            <a href="https://linkedin.com/in/sanjay-manigandan-439632269"
+               target="_blank"
+               class="contact-card">
+
+                <span class="contact-label">
+                    LINKEDIN
+                </span>
+
+                <strong>
+                    Sanjay Manigandan
+                </strong>
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
 
     <footer>
 
         <p>
-            © 2026 Sanjay Manigandan.
-            Built with <span>HTML & CSS</span>.
+            © 2026 SANJAY M. All Rights Reserved.
+        </p>
+
+        <p>
+            Data Analytics • Data Science • Machine Learning • Artificial Intelligence
         </p>
 
     </footer>
 
 
 </body>
+
 </html>
