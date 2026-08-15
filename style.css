@@ -733,3 +733,224 @@ footer p {
         padding: 20px;
     }
 }
+/* =========================================================
+   SECTION SPACING & LAYOUT CONTROL
+   ========================================================= */
+
+/* General section spacing */
+.section {
+    padding: 90px 8%;
+    scroll-margin-top: 80px;
+}
+
+/* =========================================================
+   HOME / HERO
+   More breathing space for the Home section
+   ========================================================= */
+
+.hero {
+    min-height: 92vh;
+    padding: 150px 8% 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content {
+    max-width: 1100px;
+    text-align: center;
+}
+
+/* Space between Home content elements */
+.hero .eyebrow {
+    margin-bottom: 28px;
+}
+
+.hero h1 {
+    margin-bottom: 24px;
+}
+
+.hero h2 {
+    margin-bottom: 28px;
+}
+
+.hero-description {
+    max-width: 850px;
+    margin: 0 auto 35px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   ABOUT
+   Reduce excessive vertical gap
+   ========================================================= */
+
+#about {
+    padding-top: 65px;
+    padding-bottom: 65px;
+    min-height: auto;
+}
+
+#about .section-label {
+    margin-bottom: 18px;
+}
+
+#about .section-title {
+    margin-bottom: 35px;
+}
+
+.about-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-content p {
+    margin-bottom: 18px;
+    line-height: 1.75;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   SKILLS
+   ========================================================= */
+
+#skills {
+    padding-top: 85px;
+    padding-bottom: 85px;
+}
+
+#skills .section-title {
+    margin-bottom: 45px;
+}
+
+.skills-grid {
+    margin-top: 20px;
+}
+
+
+/* =========================================================
+   PROJECTS
+   ========================================================= */
+
+#projects {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+#projects .section-title {
+    margin-bottom: 50px;
+}
+
+
+/* =========================================================
+   EDUCATION
+   ========================================================= */
+
+#education {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+#education .section-title {
+    margin-bottom: 45px;
+}
+
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+
+#contact {
+    padding-top: 90px;
+    padding-bottom: 90px;
+}
+
+#contact .section-title {
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   MOBILE RESPONSIVE SPACING
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .section {
+        padding: 65px 6%;
+    }
+
+    .hero {
+        min-height: 88vh;
+        padding: 120px 6% 90px;
+    }
+
+    #about {
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+
+    #skills,
+    #projects,
+    #education,
+    #contact {
+        padding-top: 65px;
+        padding-bottom: 65px;
+    }
+
+    .hero .eyebrow {
+        margin-bottom: 20px;
+    }
+
+    .hero h1 {
+        margin-bottom: 18px;
+    }
+
+    .hero h2 {
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        margin-bottom: 25px;
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        padding: 105px 5% 75px;
+    }
+
+    #about {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+    #skills,
+    #projects,
+    #education,
+    #contact {
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+}
